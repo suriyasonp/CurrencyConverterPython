@@ -11,6 +11,7 @@ def print_menu():
     # Menu 1
     print("*" + "1. Get currency rates".center(48) + "*")
     print("*" + "2. Convert currency rate".center(48) + "*")
+    print("*" + "3. 7 days trend".center(48) + "*")
     print("*" + "Press Q or q to exit".center(48) + "*")
 
     print("*" + " " * 48 + "*")
@@ -65,6 +66,9 @@ def access_menu(user_selected_menu):
             message_something_went_wrong()
         finally:
             return question_continue()
+    elif user_selected_menu == '3':
+        print("\n\n" + "<" * 10 + "7 days trend".center(30) + ">" * 10)
+
     elif user_selected_menu == 'q' or user_selected_menu == 'Q':
         print('Quit found.')
     else:
