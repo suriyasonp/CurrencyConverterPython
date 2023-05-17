@@ -1,3 +1,5 @@
+# https://github.com/piccolomo/plotext/blob/master/readme/basic.md
+
 import plotext as plt
 y = plt.sin() # sinusoidal test signal
 plt.scatter(y)
