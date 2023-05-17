@@ -42,9 +42,9 @@ def access_menu(user_selected_menu):
         try:
             currency_unit = input(">" * 5 + " Please enter currency unit: >> ").upper()
             currency_list = get_currency_rate(currency_unit)
-
+            c = CurrencyCodes()
             for key, value in currency_list.items():
-                print(">>>  " + (key + " " + format(value, '.4f').center(30)))
+                print(">>>  " + key + " (" + c.get_symbol(key) + ")" + (format(value, '.4f')))
         except:
             message_something_went_wrong()
         finally:
